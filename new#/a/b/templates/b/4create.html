@@ -1,0 +1,12 @@
+{%extends 'b/1.html' %}
+{% block title %}
+CREATE NEW LIST
+{% endblock %}
+{% block content %}
+CREATE PAGE
+<form method="post" , action="/create/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" , name="save">Create New</button>
+</form>
+{% endblock%}
